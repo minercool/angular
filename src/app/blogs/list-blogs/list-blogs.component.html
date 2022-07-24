@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="container-md">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+            <td><button type="button" class="btn btn-success" [routerLink]="['/create-blog']">Create</button>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let blog of blogs ; let i = index">
+            <th scope="row">{{ blog._id }}</th>
+            <td>{{ blog.name }}</td>
+            <td>{{ blog.price }}</td>
+            <td>
+                <button type="button" class="btn btn-warning" [routerLink]="['/update-blog/',blog._id]" >Update</button>
+                <button type="button" class="btn btn-primary" [routerLink]="['/show-blog/',blog._id]">Show</button>
+                <button type="button" class="btn btn-danger" (click)="deleteBlog(blog._id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>    
+</div>
+
+
+<app-footer></app-footer>

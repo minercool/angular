@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="container-md">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Action</th>
+        <th><button type="button" class="btn btn-success" [routerLink]="['/create-article']">Create</button></th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let article of articles ; let i = index">
+        <th scope="row">{{ article._id }}</th>
+        <td>{{ article.name }}</td>
+        <td>{{ article.price }}</td>
+        <td>
+          <div class="container-md">
+            <button type="button" class="btn btn-danger" (click)="deleteArticle(article._id)">Delete</button>
+            <button type="button" class="btn btn-info" [routerLink]="['/show-article/',article._id]">Show</button>
+
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-footer></app-footer>

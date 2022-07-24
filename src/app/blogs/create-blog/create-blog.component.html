@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="container-md">
+    <form #form="ngForm" (submit)="createBlog(form)" ngNativeValidate>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" placeholder="Enter name" ngModel required>
+            
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Price</label>
+            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="price" placeholder="Enter price" ngModel required>
+          </div><br>
+          <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<app-footer></app-footer>
