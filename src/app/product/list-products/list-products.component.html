@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="container-md">
+    <table class="table">
+        <thead>
+            
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th>Actions</th>
+            <th><button type="button" class="btn btn-success" [routerLink]="['/create-product']">Create</button></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products ; let i = index">
+            <th scope="row">{{ product._id}}</th>
+            <td>{{ product.name}}</td>
+            <td>{{ product.price }}</td>
+            
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+
+<app-footer></app-footer>
