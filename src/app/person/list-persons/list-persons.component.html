@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="container-md">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Actions</th>
+            <th><button type="button" class="btn btn-success" [routerLink]="['/create-person']">Create</button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let person of persons ; let i = index">
+            <th scope="row">{{ person._id }}</th>
+            <td>{{ person.name }}</td>
+            <td>{{ person.price}}</td>
+            <td><button type="button" class="btn btn-danger"(click)="mainDelete(person._id)">Delete</button>
+              <button type="button" class="btn btn-warning" [routerLink]="['/show-person/',person._id]">Details</button>
+              <button type="button" class="btn btn-info" [routerLink]="['/update-person/',person._id]">Update</button>
+
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
+
+
+
+<app-footer></app-footer>
