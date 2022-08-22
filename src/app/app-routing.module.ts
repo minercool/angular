@@ -13,6 +13,9 @@ import { ListPersonsComponent } from './person/list-persons/list-persons.compone
 import { DetailPersonComponent } from './person/detail-person/detail-person.component';
 import { UpdatePersonComponent } from './person/update-person/update-person.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ListProductsComponent } from './product/list-products/list-products.component';
+import { CreateProductComponent } from './product/create-product/create-product.component';
+import { ProductDetailsComponent } from './product/product-details/product-details.component';
 
 const routes: Routes = [
   {
@@ -63,6 +66,18 @@ const routes: Routes = [
   {
     path : 'update-person/:id',
     component : UpdatePersonComponent
+  },
+  {
+    path : 'list-products',
+    component : ListProductsComponent
+  },
+  {
+    path : 'create-product',
+    component : CreateProductComponent
+  },
+  {
+    path : 'product-details/:id',
+    component : ProductDetailsComponent
   },
   {
     path : '**',

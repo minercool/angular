@@ -19,7 +19,9 @@ import { CreatePersonComponent } from './person/create-person/create-person.comp
 import { DetailPersonComponent } from './person/detail-person/detail-person.component';
 import { UpdatePersonComponent } from './person/update-person/update-person.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ProductComponent } from './product/product.component';
+import { ListProductsComponent } from './product/list-products/list-products.component';
+import { CreateProductComponent } from './product/create-product/create-product.component';
+import { ProductDetailsComponent } from './product/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { ProductComponent } from './product/product.component';
     DetailPersonComponent,
     UpdatePersonComponent,
     NotFoundComponent,
-    ProductComponent,
+    ListProductsComponent,
+    CreateProductComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,

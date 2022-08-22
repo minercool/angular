@@ -16,6 +16,11 @@
             <th scope="row">{{ product._id}}</th>
             <td>{{ product.name}}</td>
             <td>{{ product.price }}</td>
+            <td>
+                <button type="button" class="btn btn-danger" (click)="delete(product)">Delete</button>
+                <button type="button" class="btn btn-primary" [routerLink]="['/product-details/',product._id]">Details</button>
+
+            </td>
             
           </tr>
         </tbody>
